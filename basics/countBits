@@ -1,0 +1,12 @@
+#countBits function
+def countBits(n):
+    count = 0
+    while n>0:
+        count += n & 1 # checks the least significant val
+        n >>= 1 # right shift and assigns the latest val to n
+    return count
+
+n = int(input())
+print(countBits(n))
+
+#output: 2 --> since 9 binary is 1001
