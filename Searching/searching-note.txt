@@ -17,7 +17,7 @@ def binarySearch(arr, lower_bound, upper_bound, search):
     pos = -1 # initially pos is set to -1 that represent that no ele is found yet
     beg = lower_bound # lower position of an arr
     end = upper_bound # upper position of an arr
-    while(beg < end): # will loop till the beg is less than the end of the arr
+    while(beg <= end): # will loop till the beg is less than the end of the arr
         mid = (beg+end)//2 # getting val pos of the arr so that we can compare the values later
         if(arr[mid]==search): # checking if the arr of mid pos is equal to search element
             pos = mid  # if yes then we set the pos var to mid that we found the ele at mid pos
