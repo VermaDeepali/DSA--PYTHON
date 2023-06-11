@@ -1,0 +1,34 @@
+# Linear Search
+
+
+# Binary Search
+ -- Works on sorted array
+ -- If the arr is not sorted first sort them
+ -- Follows divide and conquer approach
+ -- List is divided into two halves and then mid element is compared with item(value to be searched)
+ -- If match found we return the position/location of that element
+ -- Otherwise, we search the either of the halves depending upon the result produced by the match
+
+
+# Deep or line-by-line Analysis of the binary search
+
+arr = [10,12,24,29,39,40,51,56,69]
+def binarySearch(arr, lower_bound, upper_bound, search):
+    pos = -1 # initially pos is set to -1 that represent that no ele is found yet
+    beg = lower_bound # lower position of an arr
+    end = upper_bound # upper position of an arr
+    while(beg < end): # will loop till the beg is less than the end of the arr
+        mid = (beg+end)//2 # getting val pos of the arr so that we can compare the values later
+        if(arr[mid]==search): # checking if the arr of mid pos is equal to search element
+            pos = mid  # if yes then we set the pos var to mid that we found the ele at mid pos
+            return pos # and we return the pos of the ele found
+        elif(arr[mid]>search): # if the mid ele is greater than the search element
+            end = mid - 1 # we set the end as mid-1 since the ele is smaller than the mid so we will look into the first half of the arr
+        else:
+            beg = mid + 1 # otherwise will look into in the second half of the arr and set the beg to mid+1
+    if(pos == -1): # if the search ele not found then the pos will be always be -1
+        return "val is not in array" # and hence will return value not found
+    
+    return pos # else we return the pos at which the search ele found
+    
+print(binarySearch(arr, 0, len(arr)-1, 56)) # output: 7
