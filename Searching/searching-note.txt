@@ -1,4 +1,28 @@
 # Linear Search
+ -- Works on unordered list i.e not sorted
+ -- Traverse the list cpmpletely and match the each ele of the list with the item whose loc is to be found
+ -- Match found return loc else return null
+ 
+arr = [10,12,24,29,39,40,51,56,69]
+
+def linearSearch(arr, n, val):
+    pos = -1 # initially pos is set to -1 that no element is found yet
+    for i in range(0, n): # will loop for all the ele of the arr
+        if(arr[i]==val): # checking if the arr ele is equal to the search item
+            pos = i # when found set pos to the loc to i(i.e loc of the ele found)
+            return pos # return the pos of the ele
+    return "element not present in the array." # return not found msg when ele is not in arr
+
+print(linearSearch(arr, 8, 24)) # output: 2
+    
+# Time Complexity
+
+# Best Case: O(1) --> If we get the ele at first pos
+# Avergae Case: O(n) --> Avg case O(n)
+# Worst Case: O(n) --> When we get the ele at last pos or if the ele is not present in the arr
+
+# Space Complexity --> O(1)
+
 
 
 # Binary Search
@@ -32,3 +56,12 @@ def binarySearch(arr, lower_bound, upper_bound, search):
     return pos # else we return the pos at which the search ele found
     
 print(binarySearch(arr, 0, len(arr)-1, 56)) # output: 7
+
+
+# Time Complexity
+
+# Best Case: O(1) --> If we get the ele at first pos (i.e mid ele is the ele to be searched)
+# Avergae Case: O(logn) --> Avg case O(logn)
+# Worst Case: O(logn) --> When we have to reduce the search space till it have only one ele
+
+# Space Complexity --> O(1)
