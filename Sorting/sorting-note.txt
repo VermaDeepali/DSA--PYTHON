@@ -1,0 +1,24 @@
+# Bubble Sort Algorithm
+  -- Works on the repeatdely swapping of the adjacent elements until they are not in the intended (sorted) order.
+  -- Not suitable for large datasets
+  -- It can be used where i. complexity doesn't matter and ii. simple and shortcode is preferred
+  
+  # Deep analysis
+  
+def bubbleSort(arr):
+    n = len(arr) # gets the length of the array
+    for _ in range(n - 1): # loop to handles the total no of pass is req to sort the arr
+        for i in range(n - 1): # this loop handles the actual comparisons and swap the element
+            if arr[i] > arr[i+1]: # if the first ele is > then second ele then it needs swap
+                arr[i], arr[i+1] = arr[i+1], arr[i] # swaps the second ele with the first one
+    return arr # returns the sorted arr after the completion of all the passes
+    
+print(bubbleSort([11, 4, 3, 7, 6, 1])) # output: [1, 3, 4, 6, 7, 11]
+
+# Time Complexity
+
+# Best Case: O(n) --> When arr is already sorted
+# Avergae Case: O(n2) --> When arr is in jumbled state
+# Worst Case: O(n2) --> When arr is required to sort in reverse order
+
+# Space Complexity --> O(1)
