@@ -1,0 +1,12 @@
+def insertionSort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1
+        
+        while j>=0 and arr[j]>key:
+            arr[j+1] = arr[j]
+            j -= 1 
+        arr[j+1] = key
+    return arr
+
+print(insertionSort([12, 31, 25, 8, 32, 17])) # output: [8, 12, 17, 25, 31, 32]
