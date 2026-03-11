@@ -2,6 +2,8 @@
   -- Works on the repeatdely swapping of the adjacent elements until they are not in the intended (sorted) order.
   -- Not suitable for large datasets
   -- It can be used where i. complexity doesn't matter and ii. simple and shortcode is preferred
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
   
   # Deep analysis
   
